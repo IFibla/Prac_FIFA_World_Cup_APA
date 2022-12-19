@@ -69,11 +69,11 @@ Project Link: [Prac_FIFA_World_Cup_APA](https://github.com/IFibla/Prac_FIFA_Worl
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/IFibla/Prac_FIFA_World_Cup_APA.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+[contributors-url]: https://github.com/IFibla/Prac_FIFA_World_Cup_APA/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/IFibla/Prac_FIFA_World_Cup_APA.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
+[forks-url]: https://github.com/IFibla/Prac_FIFA_World_Cup_APA/network/members
 [stars-shield]: https://img.shields.io/github/stars/IFibla/Prac_FIFA_World_Cup_APA.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
+[stars-url]: https://github.com/IFibla/Prac_FIFA_World_Cup_APA/stargazers
 [issues-shield]: https://img.shields.io/github/issues/IFibla/Prac_FIFA_World_Cup_APA.svg?style=for-the-badge
 [issues-url]: https://github.com/IFibla/Prac_FIFA_World_Cup_APA/issues
 [license-shield]: https://img.shields.io/github/license/IFibla/Prac_FIFA_World_Cup_APA.svg?style=for-the-badge
