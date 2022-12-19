@@ -5,8 +5,8 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![Ignasi Fibla][linkedin-shield]][[linkedin-url](https://www.linkedin.com/in/ignasi-fibla-figuerola/)]
-[![Mark Smithson][linkedin-shield]][[linkedin-url](https://www.linkedin.com/in/mark-smithson-746ab4215/)]
+[![Ignasi Fibla][linkedin-shield]][linkedin-url-ignasi]
+[![Mark Smithson][linkedin-shield]][linkedin-url-mark]
 
 <details>
   <summary>Table of Contents</summary>
@@ -37,6 +37,11 @@ We hope that this predictor will be a valuable resource for soccer fans and anal
 
 ### Built With
 
+[![Python][python-badge]][python-url]
+[![Markdown][markdown-badge]][markdown-url]
+[![Tensorflow][tensorflow-badge]][tensorflow-url]
+[![Overleaf][overleaf-badge]][overleaf-url]
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Getting Started 
@@ -62,3 +67,30 @@ Mark Smithson Rivas - mark.smithson@estudiantat.upc.edu
 Project Link: [Prac_FIFA_World_Cup_APA](https://github.com/IFibla/Prac_FIFA_World_Cup_APA)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+[contributors-shield]: https://img.shields.io/github/contributors/IFibla/Prac_FIFA_World_Cup_APA.svg?style=for-the-badge
+[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/IFibla/Prac_FIFA_World_Cup_APA.svg?style=for-the-badge
+[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
+[stars-shield]: https://img.shields.io/github/stars/IFibla/Prac_FIFA_World_Cup_APA.svg?style=for-the-badge
+[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
+[issues-shield]: https://img.shields.io/github/issues/IFibla/Prac_FIFA_World_Cup_APA.svg?style=for-the-badge
+[issues-url]: https://github.com/IFibla/Prac_FIFA_World_Cup_APA/issues
+[license-shield]: https://img.shields.io/github/license/IFibla/Prac_FIFA_World_Cup_APA.svg?style=for-the-badge
+[license-url]: https://github.com/IFibla/Prac_FIFA_World_Cup_APA/blob/master/LICENSE
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url-ignasi]: https://www.linkedin.com/in/ignasi-fibla-figuerola/
+[linkedin-url-mark]: https://www.linkedin.com/in/mark-smithson-746ab4215/
+
+[python-badge]: https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white
+[python-url]: https://www.python.org
+
+[markdown-badge]: https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white
+[markdown-url]: https://www.markdownguide.org
+
+[tensorflow-badge]: https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white
+[tensorflow-url]: https://www.tensorflow.org
+
+[overleaf-badge]: https://img.shields.io/badge/Overleaf-47A141?style=for-the-badge&logo=Overleaf&logoColor=white
+[overleaf-url]: https://www.overleaf.com
+
