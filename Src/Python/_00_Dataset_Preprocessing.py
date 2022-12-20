@@ -83,9 +83,4 @@ df = replace_string_to_int_dataframe(df, replace_keys, replace_input)
 
 make_plots(df)
 
-
-
-
-
-
-# df_without_NaN_UnusedVars.to_csv('../../Data/international_matches_clean.csv')
+df_without_NaN_UnusedVars.to_csv('../../Data/international_matches_clean.csv', index=False)
