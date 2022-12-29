@@ -24,6 +24,8 @@ De ahora en adelante, empezaremos haciendo un estudio de los datos, empezando po
     \label{Conjunto-Datos-Matriz-Correlaciones}
 \end{figure}
 
+Se puede ver en la figura anterior como no existen relaciones lineales muy destacables en el conjunto de datos y, que en la gran mayoria el valor de correlacion se encuentra cercano a cero. Las unicas variables entre las que existe una correlacion lineal són las puntuaciones otorgadas por la FIFA en las distintas lineas de juego con la puntuacion final del equipo. Después de este breve estudio se ha querido comparar ambas variables objetivos con los datos del conjunto, buscando la existencia de alguna relación lineal. Este estudio se encuentra en las Figuras \ref{Conjunto-Datos-Home-Correlaciones} y \ref{Conjunto-Datos-Away-Correlaciones}.
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/homeTeamCorrelation.png}
@@ -37,5 +39,10 @@ De ahora en adelante, empezaremos haciendo un estudio de los datos, empezando po
     \caption{Correlaciones de la variable away\_team\_score}
     \label{Conjunto-Datos-Away-Correlaciones}
 \end{figure}
+
+Como se venia comentando en la matriz de correlaciones, no existe ninguna pareja de variables que destaque por una correlacion lineal positiva o negativa, y menos que una des estas variables sea del conjunto de variables objetivos. Esto se podria dar por muchos factores, pero, después de muchas hora de tratamiento de los datos, creemos que la componente de aletoriedad de los datos va a tener más repercusion el los resultados final de lo esperado. 
+\newline
+
+Con el objetivo de modificar las variancias de las variables objetivo y, intentar adquirir mejores resultados, se ha creido que operar con el valor de la diferencia de las variables objetivos podria ayudar a los modelos a obtener un mejor resultado. Como esto es solo una hipotesis, esto se va a contrastar durante todo el proyecto y este pequeño estudio se añadiria a las conclusiones finales. 
 
 \newpage
