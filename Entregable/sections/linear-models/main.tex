@@ -1,0 +1,29 @@
+\section{Modelos lineales}
+
+Los modelos lineales son un tipo de modelo matemático que utilizan una función lineal para describir la relación entre dos o más variables. Estos modelos son ampliamente utilizados en muchas áreas, como la economía, la ingeniería, la física y la psicología, debido a su simplicidad y facilidad de interpretación. Además, son útiles para hacer predicciones sobre el comportamiento de un sistema en el futuro. 
+\newline
+
+Un modelo lineal se compone de una ecuación matemática que describe la relación entre las variables independientes y la variable dependiente. Es importante tener en cuenta que los modelos lineales tienen algunas limitaciones, como la supuesta linealidad de la relación entre las variables y la supuesta independencia y homogeneidad de los errores. Estas limitaciones deben tenerse en cuenta al utilizar este tipo de modelos.
+
+\input{sections/linear-models/linear-regression.tex}
+\input{sections/linear-models/ridge.tex}
+\input{sections/linear-models/lasso.tex}
+\input{sections/linear-models/k-neighbors.tex}
+
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{lccc}
+                                        & \textbf{$R^2$} & \textbf{Validación Cruzada}  & \textbf{Tiempo de Entrenamiento} \\
+        \textbf{Linear Regression}      &  0.223         & 0.216                        & 0.013 \\
+        \textbf{Ridge}                  &  0.223         & 0.218                        & 0.002 \\
+        \textbf{Lasso}                  &  -0.000        & -0.003                       & \\
+        \textbf{KNeighbors Regressor}   &  0.202        & 0.181                         &
+    \end{tabular}
+    \caption{Resultados Modelos Lineales}
+    \label{Modelos-Lineales-Resultados}
+\end{table}
+
+
+
+\newpage
