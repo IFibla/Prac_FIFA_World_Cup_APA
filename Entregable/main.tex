@@ -3,10 +3,17 @@
 \usepackage{float}
 \usepackage{indentfirst}
 \usepackage{hyperref}
+\usepackage[spanish]{babel}
 
+\newcommand{\figsize}{0.8\textwidth}
 
 \begin{document}
     \input{sections/cover.tex}
+    \tableofcontents
+    \newpage
     \input{sections/introduction.tex}
     \input{sections/dataset.tex}
+    \input{sections/linear_models.tex}
+
+    \input{sections/references.tex}
 \end{document}
