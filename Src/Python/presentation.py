@@ -229,15 +229,13 @@ if 'dataset' in st.session_state and 'teams' in st.session_state:
             st.session_state['simulation_results'] = st.session_state['mlp'].predict(x)
     
     if not st.session_state['to_simulate']:
-        result = int(st.session_state['simulation_results'])
-        if result == 0:
+    
+        result = st.session_state['simulation_results']
+        if result < 0:
             home_result = 0
-            away_result = 0
-        elif result < 0:
-            home_result = 0
-            away_result = result
+            away_result = int(result) + 1
         else:
-            home_result = result
+            home_result = int(result) + 1
             away_result = 0
         col1, col2, col3 = st.columns([4, 1, 4])
         with col1:
