@@ -1,1 +1,8 @@
 \subsection{Multi-layer Perceptron Regressor}
+Las \textit{Multi-layer Perceptron Regressor} es una red neuronal artificial que tiene 3 o más capas de perceptrones. Estas capas son de un solo input, 1 o más capas escondidas y una sola capa de output. Este modelo optimiza el error cuadrático utilizando LBFGS o descenso del gradiente estocástico.
+\newline
+
+El estudio de este modelo ha empezado explorando los hiperparámetros para saber que combinación da los mejores resultados. En nuestro caso exploramos los siguientes hiperparámetros: \texttt{'activation'}, \texttt{'hidden\textunderscore layer\textunderscore sizes'} y \texttt{'learning\textunderscore init'}. Después de entrenar varios modelos con diferentes hiperparámetros nos hemos encontrado con el mejor siendo teniendo los siguientes hiperparámetros: \texttt{'logistic'}, \texttt{200} y \texttt{0.001} respectivamente con un acierto con una media de 0,185.
+\newline
+
+Podemos ver un acierto con una media inferior a los dos modelos anteriores, pese a esto en el siguiente apartado de resultados veremos como el $R^2$ de este modelo es el segundo más alto pese a su elevado tiempo de entrenamiento comparado con los demás.

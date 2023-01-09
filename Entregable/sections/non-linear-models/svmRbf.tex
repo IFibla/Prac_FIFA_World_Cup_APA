@@ -1,1 +1,8 @@
 \subsection{Máquinas de vectores de soporte}
+Las \textit{Support Vector Machines} se usan más frecuentemente para resolver problemas de clasificación aunque con pequeñas adaptaciones se pueden usar para resolver problemas de regressión.
+\newline
+
+El estudio de este modelo ha empezado explorando los hiperparámetros para saber que combinación da los mejores resultados. En nuestro caso exploramos los siguientes hiperparámetros: \texttt{'C'} y \texttt{'gamma'}. Después de entrenar varios modelos con diferentes hiperparámetros nos hemos encontrado con el mejor siendo teniendo los siguientes hiperparámetros: \texttt{1.9952} y \texttt{auto} respectivamente con un acierto con una media del 0,285.
+\newline
+
+Podemos ver un acierto con una media mayor al modelo anterior y esto puede deberse al hecho de que con el truco del kernel lo que hacemos es transformar un modelo no lineal a uno lineal con más dimensiones y esto puede suponer un problema para problemas como este cuando se trata de hacer regresiones.

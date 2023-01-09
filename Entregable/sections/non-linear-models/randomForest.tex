@@ -1,1 +1,8 @@
 \subsection{Random Forest}
+El algoritmo de RandomForestRegressor es una implementación de un modelo de Random Forest para la tarea de regresión. Una "Random Forest" es un modelo de aprendizaje automático que utiliza un conjunto de árboles de decisión entrenados en conjunto para hacer predicciones.
+\newline
+
+Cada árbol de decisión en el conjunto se entrena utilizando un subconjunto aleatorio de las características y ejemplos de entrenamiento. Los árboles de decisión se construyen de manera recursiva, dividiendo el conjunto de características en subconjuntos cada vez más pequeños hasta que se cumplen ciertas condiciones de parada.
+\newline
+
+El estudio de este modelo ha empezado explorando los hiperparámetros para saber que combinación da los mejores resultados. En nuestro caso exploramos los siguientes hiperparámetros: \texttt{'n\textunderscore estimators'}, \texttt{'criterion'}, \texttt{'max\textunderscore depth',} \texttt{'min\textunderscore} y \texttt{samples\textunderscore leaf'}. Después de entrenar varios modelos con diferentes hiperparámetros nos hemos encontrado con el mejor siendo teniendo los siguientes hiperparámetros: \texttt{squared\textunderscore error}, \texttt{5}, \texttt{2} y \texttt{200} respectivamente con un acierto con una media del 0,213.
