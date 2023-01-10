@@ -149,14 +149,37 @@ if 'dataset' in st.session_state:
         model_cross = np.array(cross_val_score(st.session_state['mlp'], st.session_state['X_test'], st.session_state['y_test'].squeeze()))
         title = 'MLP Regressor with a learning rate value of {learn}'.format(learn=st.session_state['mlp_value'])
 
-    res_dict = {'Training Time': train_time, 'R^2': model_score, 'Cross Validation': np.mean(model_cross)}
-    cross_dict = {i: model_cross[i] for i in range(len(model_cross))}
-    res_table = pd.DataFrame(res_dict, index=[0])
-    cross_table = pd.DataFrame(cross_dict, index=[0])
     st.markdown("<h5>{title}</h5>".format(title=title), unsafe_allow_html=True)
-    st.table(res_table)
-    st.write('The following table shows the individual results for the cross validation.')
-    st.table(cross_table)
+    with st.expander("Model Performance"):    
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.markdown("<h4 style='text-align: center'>Training Time</h4>", unsafe_allow_html=True)
+            st.markdown("<h6 style='text-align: center'>{val}</h6>".format(val=round(train_time,3)), unsafe_allow_html=True)
+        with col2:
+            st.markdown("<h4 style='text-align: center'>R^2</h4>", unsafe_allow_html=True)
+            st.markdown("<h6 style='text-align: center'>{val}</h6>".format(val=round(model_score,3)), unsafe_allow_html=True)
+        with col3:
+            st.markdown("<h4 style='text-align: center'>Cross Validation</h4>", unsafe_allow_html=True)
+            st.markdown("<h6 style='text-align: center'>{val}</h6>".format(val=round(np.mean(model_cross),3)), unsafe_allow_html=True)
+        
+        st.write('The following table shows the individual results for the cross validation.')
+
+        col1, col2, col3, col4, col5 = st.columns(5)
+        with col1:
+            st.markdown("<h4 style='text-align: center'>1</h4>", unsafe_allow_html=True)
+            st.markdown("<h6 style='text-align: center'>{val}</h6>".format(val=round(model_cross[0],3)), unsafe_allow_html=True)
+        with col2:
+            st.markdown("<h4 style='text-align: center'>2</h4>", unsafe_allow_html=True)
+            st.markdown("<h6 style='text-align: center'>{val}</h6>".format(val=round(model_cross[1],3)), unsafe_allow_html=True)
+        with col3:
+            st.markdown("<h4 style='text-align: center'>3</h4>", unsafe_allow_html=True)
+            st.markdown("<h6 style='text-align: center'>{val}</h6>".format(val=round(model_cross[2],3)), unsafe_allow_html=True)
+        with col4:
+            st.markdown("<h4 style='text-align: center'>4</h4>", unsafe_allow_html=True)
+            st.markdown("<h6 style='text-align: center'>{val}</h6>".format(val=round(model_cross[3],3)), unsafe_allow_html=True)
+        with col5:
+            st.markdown("<h4 style='text-align: center'>5</h4>", unsafe_allow_html=True)
+            st.markdown("<h6 style='text-align: center'>{val}</h6>".format(val=round(model_cross[4],3)), unsafe_allow_html=True)
 
 if os.path.isfile(path_to_teams) and 'teams' not in st.session_state:
     st.session_state['teams'] = pd.read_csv(path_to_teams, delimiter=';')
@@ -173,10 +196,18 @@ if 'dataset' in st.session_state and 'teams' in st.session_state:
             )
         home_list = st.session_state['teams'][st.session_state['teams']['name'] == home_team].values[0]
         st.markdown('<img src="{url}" width="100%" height="100%">'.format(url=home_list[2]), unsafe_allow_html=True)
-
-        home_dict = {'Goalkeeper': home_list[5], 'Defense': home_list[6], 'Midfield': home_list[7], 'Offense': home_list[8], 'Total': home_list[9]}
-        home_table = pd.DataFrame(home_dict, index=[0])
-        st.table(home_table)
+        st.write(' ')
+        with st.expander("Team Scores"):
+            st.markdown("<h4 style='text-align: center'>Goalkeeper</h4>", unsafe_allow_html=True)
+            st.markdown("<h6 style='text-align: center'>{val}</h6>".format(val=round(home_list[5],3)), unsafe_allow_html=True)
+            st.markdown("<h4 style='text-align: center'>Defense</h4>", unsafe_allow_html=True)
+            st.markdown("<h6 style='text-align: center'>{val}</h6>".format(val=round(home_list[6],3)), unsafe_allow_html=True)
+            st.markdown("<h4 style='text-align: center'>Midfield</h4>", unsafe_allow_html=True)
+            st.markdown("<h6 style='text-align: center'>{val}</h6>".format(val=round(home_list[7],3)), unsafe_allow_html=True)
+            st.markdown("<h4 style='text-align: center'>Offense</h4>", unsafe_allow_html=True)
+            st.markdown("<h6 style='text-align: center'>{val}</h6>".format(val=round(home_list[8],3)), unsafe_allow_html=True)
+            st.markdown("<h4 style='text-align: center'>Total</h4>", unsafe_allow_html=True)
+            st.markdown("<h6 style='text-align: center'>{val}</h6>".format(val=round(home_list[9],3)), unsafe_allow_html=True)
         if st.session_state['home_team'] is None or st.session_state['home_team'][0] != home_team:
             st.session_state['home_team'] = home_list
             st.session_state['to_simulate'] = True
@@ -190,9 +221,19 @@ if 'dataset' in st.session_state and 'teams' in st.session_state:
 
         st.markdown('<img src="{url}" width="100%" height="100%">'.format(url=away_list[2]), unsafe_allow_html=True)
 
-        away_dict = {'Goalkeeper': away_list[5], 'Defense': away_list[6], 'Midfield': away_list[7], 'Offense': away_list[8], 'Total': away_list[9]}
-        away_table = pd.DataFrame(away_dict, index=[0])
-        st.table(away_table)
+        st.write(' ')
+        with st.expander("Away Scores"):
+            st.markdown("<h4 style='text-align: center'>Goalkeeper</h4>", unsafe_allow_html=True)
+            st.markdown("<h6 style='text-align: center'>{val}</h6>".format(val=round(away_list[5],3)), unsafe_allow_html=True)
+            st.markdown("<h4 style='text-align: center'>Defense</h4>", unsafe_allow_html=True)
+            st.markdown("<h6 style='text-align: center'>{val}</h6>".format(val=round(away_list[6],3)), unsafe_allow_html=True)
+            st.markdown("<h4 style='text-align: center'>Midfield</h4>", unsafe_allow_html=True)
+            st.markdown("<h6 style='text-align: center'>{val}</h6>".format(val=round(away_list[7],3)), unsafe_allow_html=True)
+            st.markdown("<h4 style='text-align: center'>Offense</h4>", unsafe_allow_html=True)
+            st.markdown("<h6 style='text-align: center'>{val}</h6>".format(val=round(away_list[8],3)), unsafe_allow_html=True)
+            st.markdown("<h4 style='text-align: center'>Total</h4>", unsafe_allow_html=True)
+            st.markdown("<h6 style='text-align: center'>{val}</h6>".format(val=round(away_list[9],3)), unsafe_allow_html=True)
+
         if st.session_state['away_team'] is None or st.session_state['away_team'][0] != away_team:
             st.session_state['away_team'] = away_list
             st.session_state['to_simulate'] = True

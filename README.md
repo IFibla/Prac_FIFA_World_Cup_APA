@@ -58,6 +58,8 @@ We hope that this predictor will be a valuable resource for soccer fans and anal
 
 ## Usage
 
+A requirements.txt file has been included in the project. In order to execute the Jupyter Notebooks, the user needs the Jupyter Development Enviroment all dependencies installed. However, if the user wants to execute the web app that we have developed, it needs to go to /src/Python and execute the following command: `streamlit run presentation.py`. Then, once it is running, the user can see the web app at `http://localhost:8501`.
+
 ## Contact
 
 Ignasi Fibla Figuerola - ignasi.fibla@estudiantat.upc.edu
